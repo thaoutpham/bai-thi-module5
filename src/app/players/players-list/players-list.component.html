@@ -1,0 +1,18 @@
+<h1>List Players</h1>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Champ</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let players of  players; index as i">
+    <td>{{i + 1}}</td>
+    <td>{{players.name}}</td>
+    <td>{{players.champ}}</td>
+    <td><a [routerLink]="['/books/edit/',players.id]">Edit</a></td>
+    <td><a [routerLink]="['/books/delete/',players.id]">Delete</a></td>
+  </tr>
+</table>
+
