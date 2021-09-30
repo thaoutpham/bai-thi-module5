@@ -6,13 +6,15 @@
     <th>Champ</th>
     <th>Edit</th>
     <th>Delete</th>
+    <th>Information</th>
   </tr>
-  <tr *ngFor="let players of  players; index as i">
+  <tr *ngFor="let players of  players; index as i" >
     <td>{{i + 1}}</td>
     <td>{{players.name}}</td>
     <td>{{players.champ}}</td>
-    <td><a [routerLink]="['/books/edit/',players.id]">Edit</a></td>
-    <td><a [routerLink]="['/books/delete/',players.id]">Delete</a></td>
+    <td><a [routerLink]="['/players/edit/',players.id]">Edit</a></td>
+    <td><a [routerLink]="['/players/delete/',players.id]">Delete</a></td>
+    <td><a [routerLink]="['/players/view',players.id]">View </a></td>
   </tr>
 </table>
 

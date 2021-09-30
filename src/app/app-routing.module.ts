@@ -11,7 +11,7 @@ const routes: Routes = [
     path: 'players/list',
     component: PlayersListComponent
   }, {
-    path: 'players/view',
+    path: 'players/view/:id',
     component: PlayersViewComponent
   }, {
     path: 'players/create',

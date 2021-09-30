@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Players} from '../model/players';
 import {Observable} from 'rxjs';
-const API_URL = 'http://localhost:3001/players';
+const API_URL = 'http://localhost:3000/players';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,8 +20,8 @@ export class PlayersService {
   getById(id: string | null): Observable<Players>{
     return this.httpClient.get<Players>(API_URL + `/${id}`);
   }
-  updateBook(id: string, book: Players): Observable<Players> {
-    return this.httpClient.put<Players>(API_URL + `/${id}`, book);
+  updatePlayers(id: string, players: Players): Observable<Players> {
+    return this.httpClient.put<Players>(API_URL + `/${id}`, players);
   }
   deletePlayers(id: string): Observable<Players> {
     return this.httpClient.delete<Players>(API_URL + `/${id}`);

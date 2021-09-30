@@ -1,1 +1,29 @@
-<p>players-delete works!</p>
+<h1>Edit Address</h1>
+<form [formGroup] = "bookForm"   (ngSubmit)="deletePlayers()">
+  <table>
+    <tr>
+      <th>Id:</th>
+      <td><input type="text" readonly formControlName="id"  ></td>
+    </tr>
+    <tr>
+      <th>Name:</th>
+      <td><input type="text" formControlName="name"  ></td>
+    </tr>
+    <tr>
+      <th>Champ:</th>
+      <td><input type="text" formControlName="champ"  ></td>
+    </tr>
+    <tr>
+      <th>Kda:</th>
+      <td><input type="text" formControlName="kda" ></td>
+    </tr>
+    <tr>
+      <th>Des:</th>
+      <td><input type="text" formControlName="des" ></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Save</button></td>
+    </tr>
+  </table>
+</form>
